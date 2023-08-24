@@ -20,7 +20,7 @@ int main(){
     
     //Calculando a média
     media = (prova+teste+trab+quali)/2;
-    printf("Sua média foi %f", &media);
+    printf("Sua média foi %f", media);
     
     
 }
