@@ -20,7 +20,17 @@ int main(){
     
     //Calculando a média
     media = (prova+teste+trab+quali)/2;
-    printf("Sua média foi %f", media);
+
+    //Condições de aprovação
+    if (media >= 7){
+    	printf("A media da escola e 7");
+    	printf("\n%s Sua media foi %f", aluno,media);
+    	printf("\nVoce esta APROVADO");
+	} else {
+		printf("A media da escola e 7");
+    	printf("\n%s Sua media foi %f", aluno,media);
+    	printf("\nVoce esta REPROVADO");
+	}
     
     
 }
