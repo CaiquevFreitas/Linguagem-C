@@ -6,7 +6,7 @@ int main()
 {
      setlocale(LC_ALL,"Portuguese");
      char login_cad[30], senha_cad[20], login_ent[30], senha_ent[20];
-     int tam_login, tam_senha, conf_login, conf_senha;
+     int conf_login, conf_senha;
      
      //Recebendo dados
      printf("=====Cadastro=====");
@@ -17,19 +17,19 @@ int main()
      fgets(senha_cad, 20, stdin);
      fflush(stdin);
      //Validando dados
-     tam_login = strlen(login_cad);
-     tam_senha = strlen(senha_cad);
-     while (tam_login < 6 || tam_login > 16){
+     strlen(login_cad);
+     strlen(senha_cad);
+     while (strlen(login_cad) < 6 || strlen(login_cad) > 16){
          printf("\nLogin inválido, digite novamente(max. 15 letras, min. 5 letras): ");
          fgets(login_cad, 30, stdin);
          fflush(stdin);
-         tam_login = strlen(login_cad);
+         strlen(login_cad);
      }
-     while (tam_senha != 9){
+     while (strlen(senha_cad) != 9){
          printf("\nSenha inválida, informe uma senha de 8 caracteres: ");
          fgets(senha_cad, 20, stdin);
          fflush(stdin);
-         tam_senha = strlen(senha_cad);
+         strlen(senha_cad);
      }
      //Digitando Login e Senha
      printf("\n=====Entrar=====");
