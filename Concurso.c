@@ -24,7 +24,7 @@ int main(){
     //Recebendo dados
     for(c = 0; c < 10; c++){
         printf("Informe o nome do %d° participante: ", c+1);
-        scanf("%50.[^\n]s", &part[c].nome);
+        scanf("%50[^\n]s", &part[c].nome);
         fflush(stdin);
         
         printf("Informe a nota da redação: ");
