@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
-#include <stdlib.h>
 
 #define TAM 50
 #define P 5
