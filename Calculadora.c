@@ -23,19 +23,19 @@ int main(){
         //Realizando os Calculos
         switch(op){
         case 1:
-            printf("O resultado da soma é %f", n1 + n2);
+            printf("O resultado da soma é %.2f", n1 + n2);
             break;
         case 2:
-            printf("O resultado da subtração é %f", n1 - n2);
+            printf("O resultado da subtração é %.2f", n1 - n2);
             break;
         case 3:
-            printf("O resultado da multiplicação e %f", n1 * n2);
+            printf("O resultado da multiplicação e %.2f", n1 * n2);
             break;
         case 4:
-            printf("O resultado da divisão é %f", n1 / n2);
+            printf("O resultado da divisão é %.2f", n1 / n2);
             break;
         default:
-            printf("Operação inválida\n");
+            printf("Operação inválida\n");                                                         
             break;
     }
     
