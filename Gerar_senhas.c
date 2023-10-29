@@ -2,21 +2,19 @@
 #include <string.h>
 #include <locale.h>
 #include <stdlib.h>
+#include <time.h>
 
 char maiuc[26] = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
 char minuc[26] = "abcdefghijklmnopqrstuvxyz";
 char num[11] = "0123456789";
 char espec[9] = "!@#$%&*?";
-char senha[70];
 int tam_maiuc = 0, tam_minuc = 0, tam_num = 0, tam_espec = 0;
-
-int gerar_senha();
 
 int main(){
     setlocale(LC_ALL,"Portuguese");
-    int tam_senha, conf_maiuc, conf_minuc, conf_num, conf_espec;
-    gerar_senha();
-    
+    int tam_senha, conf_maiuc, conf_minuc, conf_num, conf_espec, num_aleat;
+    srand(time(NULL));
+
     //tamanho da senha
     printf("Informe o tamanho da senha(Max. 69 caracteres): ");
     scanf("%d", &tam_senha);
@@ -29,6 +27,7 @@ int main(){
     scanf("%d", &conf_num);
     printf("Deseja utilizar caracteres especiais? (1 - SIM / 2 - NÃO): ");
     scanf("%d", &conf_espec);
+    system("cls");
     //Quantidade de cada caracter
     while(tam_senha > 0){
     	if(conf_maiuc == 1){
@@ -56,46 +55,36 @@ int main(){
     		printf("%d caracteres restantes\n", tam_senha);
 		}
 	}
-
-    printf("Sua senha é: %s", senha);
-
+	system("cls");
+	puts("Sua senha é: ");
+	//Gerando senha
+	while(1){
+		if(tam_maiuc > 0){
+			num_aleat = rand() % 25;
+			printf("%c", maiuc[num_aleat]);
+			tam_maiuc--;
+		}
+		if(tam_minuc > 0){
+			num_aleat = rand() % 25;
+			printf("%c", minuc[num_aleat]);
+			tam_minuc--;
+		}
+		if(tam_num > 0){
+			num_aleat = rand() % 10;
+			printf("%c", num[num_aleat]);
+			tam_num--;
+		}
+		if(tam_espec > 0){
+			num_aleat = rand() % 8;
+			printf("%c", espec[num_aleat]);
+			tam_espec--;
+		}
+		if(tam_maiuc == 0 && tam_minuc == 0 && tam_num == 0 && tam_espec){
+			break;
+		}
+		
+	}
 }
-
-int gerar_senha(){
-	int c1, c2, c3, c4, a;
-	char M[26], m[26], n[11], e[9];
-	
-	for(c1 = 0; c1 < tam_maiuc; c1++){
-		a = rand() % 25;
-		M[c1] = maiuc[a];
-	}
-	for(c2 = 0; c2 < tam_minuc; c2++){
-		a = rand() % 25;
-		m[c2] = minuc[a];
-	}
-	for(c3 = 0; c3 < tam_num; c3++){
-		a = rand() % 10;
-		n[c3] = maiuc[a];
-	}
-	for(c4 = 0; c4 < tam_espec; c4++){
-		a = rand() % 8;
-		e[c4] = maiuc[a];
-	}
-}
-
-int embaralhar(){
-	
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
