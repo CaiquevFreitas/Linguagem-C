@@ -10,7 +10,7 @@ double comprimento(double q, int e, int c){
 			return result;
 		}
 		else if(e < dist[c]){
-			result = q*pow(10,e - dist[c]);
+			result = q*pow(10,dist[c] - e);
 			return result;	
 		}
 	}	
@@ -25,7 +25,7 @@ double volume(double q, int e, int c){
 			return result;
 		}
 		else if(e < dist[c]){
-			result = q*pow(10,e - dist[c]);
+			result = q*pow(10,dist[c] - e);
 			return result;	
 		}
 	}
@@ -40,7 +40,7 @@ double massa(double q, int e, int c){
 			return result;
 		}
 		else if(e < dist[c]){
-			result = q*pow(10,e - dist[c]);
+			result = q*pow(10,dist[c] - e);
 			return result;	
 		}
 	}
