@@ -31,7 +31,7 @@ int main(){
 			printf("Qual a quantidade do material: ");
 			scanf("%lf", &quant);
 			for(i = 0; i < 7; i++){
-				printf("O resultado da conversão em %s: %lf\n",nm[i].nome_c, comprimento(quant, esc2, i));
+				printf("O resultado da conversão de %s para %s: %lf\n",nm[esc2].nome_c, nm[i].nome_c, comprimento(quant, esc2, i));
 			}	
 			break;
 		case 2:
@@ -41,7 +41,7 @@ int main(){
 			printf("Qual a quantidade do material: ");
 			scanf("%lf", &quant);
 			for(i = 0; i < 7; i++){
-				printf("O resultado da conversão em %s: %lf\n",nm[i].nome_v, volume(quant, esc2, i));
+				printf("O resultado da conversão de %s para %s: %lf\n",nm[esc2].nome_v, nm[i].nome_v, volume(quant, esc2, i));
 			}	
 			break;
 		case 3:
@@ -51,7 +51,7 @@ int main(){
 			printf("Qual a quantidade do material: ");
 			scanf("%lf", &quant);
 			for(i = 0; i < 7; i++){
-				printf("O resultado da conversão em %s: %lf\n",nm[i].nome_m, massa(quant, esc2, i));
+				printf("O resultado da conversão de %s para %s: %lf\n",nm[esc2].nome_m, nm[i].nome_m, massa(quant, esc2, i));
 			}	
 			break;
 	}
