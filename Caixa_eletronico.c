@@ -4,12 +4,12 @@
 int main(){
     setlocale(LC_ALL,"Portuguese");
     int valor, total, totalced = 0;
-    int ced[6] = {100, 50, 20, 10, 5, 2};
+    int ced[7] = {100, 50, 20, 10, 5, 2, 1};
     
     printf("=============================");
     printf("\nBem vindo ao Banco do Brasil\n");
     printf("=============================\n");
-    printf("Notas: R$100, R$50, R$20, R$10, R$5, R$2");
+    printf("Notas: R$100, R$50, R$20, R$10, R$5, R$2, R$1");
     printf("\nInforme o valor que deseja sacar: R$");
     scanf("%d", &valor);
    
