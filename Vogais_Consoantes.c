@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#define tam 100 
+#define tam 150 
 
 void minuscula(char str[tam]);
 
@@ -16,7 +16,7 @@ int main(){
 	
 	printf("NÃO UTILIZE ACENTOS!!!\n");
 	printf("Digite uma frase (max de %d caracteres): ", tam);
-	scanf("%[^\n]s", frase);
+	fgets(frase,tam,stdin);
 	
 	minuscula(frase);
 	
